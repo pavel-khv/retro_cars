@@ -1,0 +1,37 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="X-UA-Compatible" content="ie=edge"><title>Retro Cars Branding</title><link rel="stylesheet" href="css/reset.css"><link rel="stylesheet" href="css/news.css"><link rel="stylesheet" href="css/magnific-popup.css"><link rel="stylesheet" href="css/news_media.css"></head><body><div class="container"><div class="flex-1"><header class="header"><div class="header_wrap"><a href="#"><p class="header__logo">Retro cars branding</p></a><ul class="header__nav"><li><a href="index.html" class="header__link home">HOME</a></li><li class="slide__menu"><a href="about_us.html" class="header__link about_us">ABOUT US</a><ul class="about_us-menu"><li><a href="" class="about_us-links">Schedule</a></li><li><a href="" class="about_us-links history">History</a><ul class="history__menu"><li class="history__list"><a href="" class="history__menu-links">Nam Liber</a></li><li class="history__list"><a href="" class="history__menu-links">Duisautem</a></li><li class="history__list"><a href="" class="history__menu-links">Eodemo</a></li></ul></li><li><a href="" class="about_us-links">Archive</a></li></ul></li><li><a href="news.html" class="header__link news header__link-active">NEWS</a></li><li><a href="faq.html" class="header__link faq">FAQ</a></li><li><a href="blog.html" class="header__link blog">BLOG</a></li><li><a href="contacts.html" class="header__link contacts">CONTACTS</a></li></ul><select class="dropdown_menu" onchange="top.location.href=this.options[this.selectedIndex].value;"><option value="index.html">Home</option><option value="about_us.html">About Us</option><option value="#">- Schedule</option><option value="#">- History</option><option value="#">-- Nam liber</option><option value="#">-- Duisautem</option><option value="#">-- Eodemo</option><option value="#">- Archive</option><option value="news.html" selected="selected">News</option><option value="faq.html">FAQ</option><option value="blog.html">Blog</option><option value="contacts.html">Contacts</option></select></div></header><main class="main"><section class="news"><h1 class="news__title"><span class="news__title-pos">Latest news</span></h1><div class="news__car"><div class="news__wrap"><div class="wrap__img"><a href="img/news/page-3_img-1-b.jpg"><img class="news__img" src="img/news/page-3_img-1.jpg" alt=""></a></div><div class="news__content"><a class="content__theme" href="#">Duis autem vel eum iriure der</a><br><span class="content__date">19 Feb 2014</span><p class="content__text">Claritas est etiam procesm, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea comfacilisis at vero eros et accumsan et iusto odio dignissim qui bl andit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imper</p></div></div><div class="news__wrap"><div class="news__content"><a class="content__theme" href="#">Typi non habent claritatem</a><br><span class="content__date">17 Feb 2014</span><p class="content__text">Est etiam procesm, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea comfacilisis at vero eros et accumsan et iusto odio dignissim qui bl andit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nih</p></div><div class="wrap__img"><a href="img/news/page-3_img-2-b.jpg"><img class="news__img" src="img/news/page-3_img-2.jpg" alt=""></a></div></div><div class="news__wrap"><div class="wrap__img"><a href="img/news/page-3_img-3-b.jpg"><img class="news__img" src="img/news/page-3_img-3.jpg" alt=""></a></div><div class="news__content"><a class="content__theme" href="#">Lorem ipsum dolor sit amet</a><br><span class="content__date">14 Feb 2014</span><p class="content__text">Seritas est etiam procesm, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea comfacilisis at vero eros et accumsan et iusto odio dignissim qui bl andit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imper</p></div></div><div class="news__wrap"><div class="news__content"><a class="content__theme" href="#">Typi non habent claritatem</a><br><span class="content__date">17 Feb 2014</span><p class="content__text">Est etiam procesm, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea comfacilisis at vero eros et accumsan et iusto odio dignissim qui bl andit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nih</p></div><div class="wrap__img"><a href="img/news/page-3_img-4-b.jpg"><img class="news__img" src="img/news/page-3_img-4.jpg" alt=""></a></div></div></div></section></main></div><footer class="footer"><nav class="footer__nav"><a href="index.html" class="footer__link home">HOME</a> <a href="about_us.html" class="footer__link about-us">ABOUT US</a> <a href="news.html" class="footer__link news footer__link-active">NEWS</a> <a href="faq.html" class="footer__link faq">FAQ</a> <a href="blog.html" class="footer__link blog">BLOG</a> <a href="contacts.html" class="footer__link contacts">CONTACTS</a></nav></footer></div><script src="js/text.js"></script><script src="libs/jquery-3.3.1.js"></script><script src="libs/jquery.magnific-popup.min.js"></script><script>$(document).ready(function() {
+            $('.wrap__img').magnificPopup({
+                delegate: 'a',
+                type: 'image',
+                closeOnContentClick: false,
+                closeBtnInside: false,
+                mainClass: 'mfp-with-zoom mfp-img-mobile',
+                image: {
+                    verticalFit: true
+                },
+                gallery: {
+                    enabled: true
+                },
+                zoom: {
+                    enabled: true,
+                    duration: 300, // don't foget to change the duration also in CSS
+                    opener: function(element) {
+                        return element.find('img');
+                    }
+                }
+                
+            });
+        });</script><script>(function($) {
+            $(document).ready(function() {
+                var $header = $("header"),
+                    $clone = $header.before($header.clone().addClass("clone"));
+               
+                $(window).on("scroll", function() {
+                    var fromTop = $(document).scrollTop();
+                    if(window.innerWidth > 768) {
+                        $("body").toggleClass("down", (fromTop > 80));
+                    }else{
+                        $("body").removeClass("down");
+                    }
+                });
+            });
+        })(jQuery);</script></body></html>
