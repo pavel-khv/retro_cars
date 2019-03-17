@@ -1,0 +1,243 @@
+$main_size : 16px 
+=placeholder
+	&::-webkit-input-placeholder
+		@content
+	&:-moz-placeholder
+		@content
+	&::-moz-placeholder
+		@content
+	&::-ms-input-placeholder
+		@content
+	&:-ms-input-placeholder
+		@content
+
+@media screen and (min-width: 1599px)
+	.header
+		padding: 25px
+	.header__logo
+		font-size: $main_size + 22
+	.header__link
+		font-size: $main_size + 6
+	.about_us-menu
+		top: 22px
+		left: 15px
+		font-size: $main_size 
+		padding: 35px 20px 15px
+	.about_us-links,
+	.history__menu-links
+		line-height: 22px
+	.history__menu
+		top: 45px
+		left: 140px
+		font-size: $main_size 
+		padding: 15px 0
+	.header_wrap
+		width: 1180px
+	.contact__title-pos,
+	.blog__title-pos,
+	.categories__title-pos,
+	.search__title-pos,
+	.recent__title-pos
+		font-size: $main_size + 34
+	.main
+		width: 1140px
+	.blog,
+	.post__img
+		width: 640px
+	.blog__img
+		width: 100%
+	.post__info a,
+	.post__comments
+		font-size: $main_size 
+	.post__text
+		font-size: $main_size
+		line-height: 22px
+	.post__title,
+	.post__read,
+	.recent__title
+		 font-size: $main_size + 8
+	.sidebar
+		width: 400px
+	.categories__link
+		font-size: $main_size 
+		line-height: 26px
+	.content__text
+		font-size: $main_size - 2
+		line-height: 24px
+	.categories__list
+		padding: 25px
+	.search__input
+		width: 345px
+		font-size: $main_size
+		+placeholder
+			font-size: $main_size
+	.recent__posts
+		width: 400px
+	.footer__link
+		font-size: $main_size + 6
+
+@media screen and (min-width: 1919px)
+	.header
+		padding: 25px
+	.header__logo
+		font-size: $main_size + 24
+	.header__link
+		font-size: $main_size + 10
+	.about_us-menu
+		top: 26px
+		left: 15px
+		font-size: $main_size + 4
+		padding: 35px 20px 15px
+	.about_us-links,
+	.history__menu-links
+		line-height: 32px
+	.history__menu
+		top: 43px
+		left: 141px
+		font-size: $main_size + 4
+		padding: 15px 0
+	.header_wrap
+		width: 1400px
+	.contact__title-pos,
+	.blog__title-pos,
+	.categories__title-pos,
+	.search__title-pos,
+	.recent__title-pos
+		font-size: $main_size + 38
+	.main
+		width: 1380px
+	.blog,
+	.post__img
+		width: 740px
+	.blog__img
+		width: 100%
+	.post__info a,
+	.post__comments
+		font-size: $main_size + 4
+	.post__text
+		font-size: $main_size + 4
+		line-height: 24px
+	.post__title,
+	.post__read,
+	.recent__title
+		 font-size: $main_size + 16
+	.sidebar
+		width: 500px
+	.categories__link
+		font-size: $main_size + 4
+		line-height: 28px
+	.content__text
+		font-size: $main_size + 2
+		line-height: 24px
+	.search__input
+		width: 445px
+		font-size: $main_size + 4
+		+placeholder
+			font-size: $main_size + 4
+	.magnifier
+		top: 15px
+	.recent__posts
+		width: 500px
+	.footer__link
+		font-size: $main_size + 10
+
+@media screen and (max-width: 999px)
+	.header
+		padding: 15px
+	.header_wrap
+		width: 715px
+	.main
+		width: 700px
+	.blog
+		width: 420px
+	.blog__img
+		width: 100%
+	.sidebar
+		width: 230px
+	.search__input
+		width: 175px
+	.blog__title-pos,
+	.categories__title-pos,
+	.search__title-pos
+		&:before
+			width: 35px
+			left: -40px
+		&:after
+			width: 35px
+			right: -40px
+	.recent__title-pos
+		&:before
+			width: 35px
+			left: -40px
+		&:after
+			width: 35px
+			right: -60px
+	.recent__block
+		width: 230px
+	.recent__img
+		width: 70px
+	.recent__text
+		margin-left: 10px
+
+
+@media screen and (max-width: 767px)
+	.header__logo
+		width: 200px
+	.header_wrap
+		width: 420px
+		flex-wrap: wrap
+	.header__nav
+		display: none
+	.dropdown_menu
+		display: inline-block
+	.related__title-pos
+		font-size: $main_size + 22
+	.main
+		width: 420px
+	.blog,
+	.sidebar,
+	.blog__img,
+	.recent__block
+		width: 100%
+	.search__input
+		width: 365px
+	.categories,
+	.search
+		margin-bottom: 50px
+
+	
+
+@media screen and (max-width: 479px)
+	.header
+		padding: 15px 5px
+	.header__logo
+		width: 200px
+	.header_wrap,
+	.dropdown_menu
+		width: 285px
+	.related__title-pos
+		font-size: $main_size + 18
+		&:before
+			width: 35px
+			left: -40px
+		&:after
+			width: 35px
+			right: -40px
+	.main
+		width: 285px
+	.search__input
+		width: 230px
+	.post__links
+		flex-wrap: wrap
+	.post__info a,
+	.post__comments
+		font-size: $main_size - 4	
+		margin-right: 5px
+	.footer__nav
+		width: 300px
+		margin: 0 auto
+	.footer__link
+		margin-left: 14px
+		letter-spacing: 0.01em
+		font-size: $main_size 
+

@@ -1,0 +1,312 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700|Sacramento|Yanone+Kaffeesatz:400,500,700')
+
+$color_text : #46433f
+$color_caption : rgb(70, 67, 63)
+$hover_color : #0c9a8c
+$main_bg_color : #f3f3d3
+$sacramento : 'Sacramento', cursive
+$yanone : 'Yanone Kaffeesatz', sans-serif
+$open_sans : 'Open Sans', sans-serif
+$main_size : 16px 
+
+=title-style
+	font-family: $sacramento
+	font-size: $main_size + 26
+	color: $color_text
+	font-weight: 400
+	position: relative
+	&:before
+		content: ''
+		display: block
+		width: 67px
+		height: 1px
+		background: $color_text
+		position: absolute
+		left: -80px
+		top: 25px
+	&:after
+		content: ''
+		display: block
+		width: 67px
+		height: 1px
+		background: $color_text
+		position: absolute
+		right: -80px
+		top: 25px
+=accordion-hover
+	background: $hover_color
+	color: #fff
+	width: 430px
+	&:after
+		display: inline-block
+
+=nav-link
+	margin-left: 46px
+	font-size: $main_size + 2
+	font-family: $yanone
+	color: $color_text
+	transition: 0.2s
+	font-weight: 500
+	&:hover
+		color: $hover_color
+
+=caption-style
+	display: flex
+	flex-wrap: wrap
+	width: 940px
+	margin: 0 auto
+	padding: 30px 0 100px
+
+=placeholder
+	&::-webkit-input-placeholder
+		@content
+	&:-moz-placeholder
+		@content
+	&::-moz-placeholder
+		@content
+	&::-ms-input-placeholder
+		@content
+	&:-ms-input-placeholder
+		@content
+=hover-menu
+	position: absolute
+	top: 20px
+	left: 20px
+	padding: 20px 30px 10px
+	z-index: 2
+	background: #fff
+	font-size: $main_size - 3
+	line-height: 28px
+
+
+a 
+    text-decoration: none
+ul
+	list-style: none
+html,body,.container
+	height: 100%
+body 
+    width: 100%
+    font-family: $open_sans
+    background: $main_bg_color
+
+.container
+	display: flex
+	flex-direction: column
+	min-height: 100vh
+.header__logo
+	font-family: $sacramento
+	font-size: $main_size + 14
+	color: $color_text
+.header
+	display: flex
+	max-width: 100%
+	justify-content: space-between
+	align-items: center
+	padding: 15px 30px
+	background: #fff
+.header_wrap
+	display: flex
+	justify-content: space-between
+	align-items: center
+	width: 980px
+	margin: 0 auto
+.header__nav
+	display: flex
+	li:hover > ul
+		display: block
+.header__link
+	+nav-link
+.header__link-active
+	color: $hover_color
+.about_us
+	position: relative
+	//треугольник для выпадающего списка
+	&:after
+		content: ''
+		position: absolute
+		left: 55%
+		z-index: 3
+		margin-left: -6px
+		bottom: -10px
+		border: 4px solid transparent
+		border-top: 4px solid $color_text
+.about_us-menu
+	+hover-menu
+	padding: 20px 0 10px
+	width: 110px
+	text-align: center
+	display: none
+.slide__menu
+	position: relative
+
+.about_us-links
+	color: $color_text
+	transition: 0.2s
+	width: 100%
+	&:hover 
+		color: #d0d0b5
+.history:after
+	content: '›'
+	position: absolute
+	right: 10px
+	padding-left: 20px
+	font-size: $main_size + 2
+.history__menu
+	+hover-menu
+	text-align: center
+	left: 110px
+	top: 38px
+	padding: 10px 0
+	display: none
+.history__list
+	transition: 0.4s
+	&:hover
+		background: #d0d0b5
+.history__menu-links
+	display: inline-block
+	padding: 0 25px
+	color: $color_text
+	transition: 0.2s
+	&:hover
+		color: #fff
+
+.information
+	padding: 70px 0 100px
+.information__title
+	text-align: center
+	padding-bottom: 30px
+.information__title-pos
+	+title-style
+.detalis
+	display: flex
+	justify-content: center
+.information__map
+	width: 470px
+	height: 420px
+.information__data
+	background: #fff
+	color: #666
+	text-align: center
+	font-size: $main_size - 3
+	padding: 60px 0 40px
+	width: 470px
+	height: 320px
+.company-name
+	font-weight: 500
+	font-family: $yanone
+	font-size: $main_size + 4
+	padding-bottom: 10px
+.adress__street
+	padding-bottom: 20px
+.phones
+	line-height: 16px
+.adress-wrapper
+	margin-bottom: 30px
+.email__link
+	color: #666
+	text-decoration: underline
+	&:hover
+		text-decoration: none
+
+.contact
+	width: 100%
+	background: url('../img/background-contacts/bg-1.png') no-repeat
+	background-size: cover
+	padding: 100px 0 40px
+.contact__title-pos
+	+title-style
+	color: #fff
+	&:before
+		background: #fff
+	&:after
+		background: #fff
+.contact__title
+	text-align: center
+.contact__form
+	text-align: center
+	width: 490px
+	margin: 15px auto
+.input
+	background: transparent
+	font-family: $open_sans
+	border: 1px solid #fff
+	width: 90%
+	height: 20px
+	padding: 10px
+	margin-bottom: 8px
+	color: #fff
+	outline: none
+	+placeholder
+		color: #fff !important
+		opacity: 0.9 
+		font-family: $open_sans
+		font-size: 13px
+	&:focus
+		+placeholder
+			opacity: 0.4
+.text__area
+	resize: none
+	height: 60px
+	overflow: auto
+.submit
+	width: 96%
+	padding: 10px
+	line-height: 22px
+	font-size: 22px
+	border: none
+	color: #fff
+	background: $hover_color
+	font-family: $yanone
+	transition: 0.4s
+	&:hover
+		cursor: pointer
+		background: rgb(47, 47, 41)
+
+.footer
+	background: rgb(47, 47, 41)
+.footer__nav
+	text-align: center
+	padding: 43px 0
+
+.footer__link
+	+nav-link
+	color: #fff
+	margin-left: 24px
+	letter-spacing: 0.01em
+	font-size: $main_size + 3
+	&:first-child
+		margin-left: 0	
+.footer__link-active
+	color: $hover_color
+
+
+.header 
+    position: relative
+    box-shadow: 0px 1px 5px -1px rgba(0,0,0,0.75)
+
+.header.clone 
+    position: fixed
+    top: -180px
+    transition: 0.3s top ease-in
+
+body.down .header.clone 
+    top: 0
+    left: 0
+    right: 0
+    z-index: 999
+
+.dropdown_menu
+	position: relative
+	width: 420px
+	padding: 10px
+	margin-top: 10px
+	outline: 0
+	border: none
+	color: #fff 
+	background: #2d2d2d
+	font-family: $open_sans
+	font-weight: 600
+	appearance: none
+	display: none
+	

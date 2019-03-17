@@ -1,0 +1,219 @@
+$main_size : 16px
+=placeholder
+	&::-webkit-input-placeholder
+		@content
+	&:-moz-placeholder
+		@content
+	&::-moz-placeholder
+		@content
+	&::-ms-input-placeholder
+		@content
+	&:-ms-input-placeholder
+		@content
+
+@media screen and (min-width: 1599px)
+	.header
+		padding: 25px
+	.header__logo
+		font-size: $main_size + 22
+	.header__link
+		font-size: $main_size + 6
+	.about_us-menu
+		top: 22px
+		left: 15px
+		font-size: $main_size + 2
+		padding: 35px 20px 15px
+	.about_us-links,
+	.history__menu-links
+		line-height: 22px
+	.history__menu
+		top: 45px
+		left: 140px
+		font-size: $main_size + 2
+		padding: 15px 0
+	.header_wrap
+		width: 1180px
+	.detalis
+		width: 1140px
+		margin: 0 auto
+	.information__map
+		width: 570px
+		height: 480px
+	.information__data
+		display: flex
+		flex-direction: column
+		justify-content: center
+		width: 570px
+		height: 480px
+		padding: 0 
+	.company-name
+		font-size: $main_size + 8
+	.adress__street
+		font-size: $main_size 
+	.phones
+		font-size: $main_size 
+		line-height: 20px
+	.adress-wrapper
+		font-size: $main_size 
+	.contact__title-pos
+		font-size: $main_size + 34
+	.contact__form
+		width: 520px
+	.input
+		width: 500px
+		+placeholder
+			font-size: $main_size 
+	.text__area
+		height: 120px
+	.submit
+		width: 522px
+		font-size: $main_size + 8
+	.footer__link
+		font-size: $main_size + 6
+
+@media screen and (min-width: 1919px)
+	.header
+		padding: 25px
+	.header__logo
+		font-size: $main_size + 24
+	.header__link
+		font-size: $main_size + 10
+	.about_us-menu
+		top: 26px
+		left: 15px
+		font-size: $main_size + 4
+		padding: 35px 20px 15px
+	.about_us-links,
+	.history__menu-links
+		line-height: 24px
+	.history__menu
+		top: 43px
+		left: 141px
+		font-size: $main_size + 4
+		padding: 15px 0
+	.header_wrap
+		width: 1400px
+	.contact__title-pos
+		font-size: $main_size + 38
+	.detalis
+		width: 1380px
+	.information__map,
+	.information__data
+		width: 690px
+		height: 580px
+	.company-name
+		font-size: $main_size + 12
+	.adress__street
+		font-size: $main_size  + 4
+	.phones
+		font-size: $main_size + 4
+		line-height: 24px
+	.adress-wrapper
+		font-size: $main_size + 4
+	.contact__form
+		width: 620px
+	.input
+		width: 600px
+		padding: 20px
+		+placeholder
+			font-size: $main_size + 2
+	.text__area
+		height: 170px
+	.submit
+		width: 643px
+		padding: 20px
+		font-size: $main_size + 12
+	.footer__link
+		font-size: $main_size + 10
+
+@media screen and (max-width: 999px)
+	.header
+		padding: 15px
+	.header_wrap
+		width: 715px
+	.information__map,
+	.information__data
+		width: 350px
+	.information__map
+		height: 340px
+	.information__data
+		padding: 20px 0
+		height: 300px
+	.contact
+		background-position: center center
+
+@media screen and (max-width: 767px)
+	.header__logo
+		width: 200px
+	.header_wrap
+		width: 420px
+		flex-wrap: wrap
+	.header__nav
+		display: none
+	.dropdown_menu
+		display: inline-block
+	.detalis
+		width: 420px
+		margin: 0 auto
+		flex-wrap: wrap
+	.information__map,
+	.information__data
+		width: 100%
+	.information__map
+		height: 240px
+	.contact__form
+		width: 420px
+	.input
+		width: 400px
+	.text__area
+		height: 80px
+	.submit
+		width: 422px
+	.information__title-pos
+		font-size: $main_size + 22
+
+@media screen and (max-width: 479px)
+	.header
+		padding: 15px 5px
+	.header__logo
+		width: 200px
+	.header_wrap,
+	.dropdown_menu
+		width: 285px
+	.detalis
+		width: 285px
+		margin: 0 auto
+		flex-wrap: wrap
+	.information__map,
+	.information__data
+		width: 100%
+	.information__map
+		height: 240px
+	.contact__form
+		width: 285px
+	.input
+		width: 265px
+	.submit
+		width: 287px
+		font-size: $main_size + 4
+	.information__title-pos,
+	.contact__title-pos
+		font-size: $main_size + 18
+		&:before
+			width: 35px
+			left: -40px
+		&:after
+			width: 35px
+			right: -40px
+	.contact
+		padding: 50px 0 20px
+	.information
+		padding: 50px 0
+	.footer__nav
+		width: 300px
+		margin: 0 auto
+	.footer__link
+		margin-left: 14px
+		letter-spacing: 0.01em
+		font-size: $main_size 
+

@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700|Sacramento|Yanone+Kaffeesatz:400,500,700')
+
+$color_text : #666
+$color_caption : rgb(70, 67, 63)
+$hover_color : #0c9a8c
+$main_bg_color : #f3f3d3
+$sacramento : 'Sacramento', cursive
+$yanone : 'Yanone Kaffeesatz', sans-serif
+$open_sans : 'Open Sans', sans-serif
+$main_size : 16px 
+
+=title-style
+	font-family: $sacramento
+	font-size: $main_size + 26
+	color: $color_text
+	font-weight: 400
+	position: relative
+	&:before
+		content: ''
+		display: block
+		width: 67px
+		height: 1px
+		background: $color_text
+		position: absolute
+		left: -80px
+		top: 25px
+	&:after
+		content: ''
+		display: block
+		width: 67px
+		height: 1px
+		background: $color_text
+		position: absolute
+		right: -80px
+		top: 25px
+=accordion-hover
+	background: $hover_color
+	color: #fff
+	width: 430px
+	&:after
+		display: inline-block
+
+=nav-link
+	margin-left: 46px
+	font-size: $main_size + 2
+	font-family: $yanone
+	color: $color_text
+	transition: 0.2s
+	font-weight: 500
+	&:hover
+		color: $hover_color
+
+=caption-style
+	display: flex
+	flex-wrap: wrap
+	width: 940px
+	margin: 0 auto
+	padding: 30px 0 100px
+
+=placeholder
+	&::-webkit-input-placeholder
+		@content
+	&:-moz-placeholder
+		@content
+	&::-moz-placeholder
+		@content
+	&::-ms-input-placeholder
+		@content
+	&:-ms-input-placeholder
+		@content
+=hover-menu
+	position: absolute
+	top: 20px
+	left: 20px
+	padding: 20px 30px 10px
+	z-index: 2
+	background: #fff
+	font-size: $main_size - 3
+	line-height: 28px
+
+
+a 
+    text-decoration: none
+ul
+	list-style: none
+html,body,.container
+	height: 100%
+body 
+    width: 100%
+    font-family: $open_sans
+    background: $main_bg_color
+.header__logo
+	font-family: $sacramento
+	font-size: $main_size + 14
+	color: $color_text
+.header
+	display: flex
+	max-width: 100%
+	justify-content: space-between
+	align-items: center
+	padding: 15px 30px
+	background: #fff
+.header_wrap
+	display: flex
+	justify-content: space-between
+	align-items: center
+	width: 980px
+	margin: 0 auto
+.header__nav
+	display: flex
+	li:hover > ul
+		display: block
+.header__link
+	+nav-link
+.header__link-active
+	color: $hover_color
+.about_us
+	position: relative
+	//треугольник для выпадающего списка
+	&:after
+		content: ''
+		position: absolute
+		left: 55%
+		z-index: 3
+		margin-left: -6px
+		bottom: -10px
+		border: 4px solid transparent
+		border-top: 4px solid $color_text
+.about_us-menu
+	+hover-menu
+	padding: 20px 0 10px
+	width: 110px
+	text-align: center
+	display: none
+.slide__menu
+	position: relative
+
+.about_us-links
+	color: $color_text
+	transition: 0.2s
+	width: 100%
+	&:hover 
+		color: #d0d0b5
+.history:after
+	content: '›'
+	position: absolute
+	right: 10px
+	padding-left: 20px
+	font-size: $main_size + 2
+.history__menu
+	+hover-menu
+	text-align: center
+	left: 110px
+	top: 38px
+	padding: 10px 0
+	display: none
+.history__list
+	transition: 0.4s
+	&:hover
+		background: #d0d0b5
+.history__menu-links
+	display: inline-block
+	padding: 0 25px
+	color: $color_text
+	transition: 0.2s
+	&:hover
+		color: #fff
+.whoWeAre
+	padding-top: 50px
+.whoWeAre__title,
+.whatWeDo__title,
+.whyUs__title
+	text-align: center
+.whoWeAre__title-pos,
+.whatWeDo__title-pos,
+.whyUs__title-pos
+	+title-style	
+.whoWeAre__block
+	width: 300px
+	display: flex
+	flex-wrap: wrap
+.content__title
+	display: inline-block
+	font-weight: 500
+	font-family: $yanone
+	font-size: $main_size + 4
+	color: $color_text
+	margin-bottom: 10px
+	transition: 0.4s
+	&:hover
+		color: $hover_color
+.content__title-hover:hover
+	color: $color_text
+.whoWeAre__text
+	background: #fff
+	text-align: center
+	padding: 25px
+.content__text
+	font-size: $main_size - 3
+	color: $color_text
+	margin-bottom: 15px
+	line-height: 17px
+.content__link,
+.whyUs__link
+	+nav-link
+	margin-left: 0
+.whoWeAre__content
+	+caption-style
+	justify-content: space-between
+	padding-bottom: 70px
+
+.whatWeDo__block,
+.whyUs__block
+	width: 940px
+	display: flex
+	margin: 30px auto
+.whatWeDo__text,
+.whyUs__text
+	margin-left: 20px
+.whyUs__block
+	padding-bottom: 50px
+.content__links
+	display: flex
+	flex-wrap: wrap
+	margin-left: -20px
+	ul
+		margin-right: 20px
+	li
+		background: url('../img/about_us/mark.gif') 0px no-repeat 
+		padding-left: 8px
+.whyUs__link
+	font-family: $open_sans
+	font-size: $main_size - 3
+
+
+.footer
+	background: rgb(47, 47, 41)
+.footer__nav
+	text-align: center
+	padding: 43px 0
+.footer__link
+	+nav-link
+	color: #fff
+	margin-left: 24px
+	letter-spacing: 0.01em
+	font-size: $main_size + 3
+	&:first-child
+		margin-left: 0	
+.footer__link-active
+	color: $hover_color
+
+.header 
+    position: relative
+    box-shadow: 0px 1px 5px -1px rgba(0,0,0,0.75)
+
+.header.clone 
+    position: fixed
+    top: -180px
+    transition: 0.2s top ease-in
+
+
+body.down .header.clone 
+    top: 0
+    left: 0
+    right: 0
+    z-index: 999
+
+
+.dropdown_menu
+	width: 420px
+	padding: 10px
+	margin-top: 10px
+	outline: 0
+	border: none
+	color: #fff 
+	background: #2d2d2d
+	font-family: $open_sans
+	font-weight: 600
+	appearance: none
+	display: none

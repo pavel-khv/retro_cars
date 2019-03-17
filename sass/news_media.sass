@@ -1,0 +1,177 @@
+$main_size : 16px
+
+@media screen and (min-width: 1599px)
+	.header
+		padding: 25px
+	.header__logo
+		font-size: $main_size + 22
+	.header__link
+		font-size: $main_size + 6
+	.about_us-menu
+		top: 22px
+		left: 15px
+		font-size: $main_size 
+		padding: 35px 20px 15px
+	.about_us-links,
+	.history__menu-links
+		line-height: 22px
+	.history__menu
+		top: 45px
+		left: 140px
+		font-size: $main_size 
+		padding: 15px 0
+	.header_wrap
+		width: 1180px
+	.news__title-pos,
+	.related__title-pos,
+	.models__title-pos,
+	.contact__title-pos
+		font-size: $main_size + 34
+	.news__car
+		width: 1140px
+	.wrap__img,
+	.news__img
+		width: 570px
+		height: 366px
+	.news__content
+		display: flex
+		flex-direction: column
+		align-items: center
+		justify-content: center
+		width: 570px
+		height: 366px
+		padding: 50px
+	.content__text
+		width: 380px
+		font-size: $main_size
+		line-height: 20px 
+	.content__theme
+		font-size: $main_size + 8
+	.content__date
+		font-size: $main_size
+	.footer__link
+		font-size: $main_size + 6
+
+@media screen and (min-width: 1919px)
+	.header
+		padding: 25px
+	.header__logo
+		font-size: $main_size + 24
+	.header__link
+		font-size: $main_size + 10
+	.about_us-menu
+		top: 26px
+		left: 15px
+		font-size: $main_size + 4
+		padding: 35px 20px 15px
+	.about_us-links,
+	.history__menu-links
+		line-height: 32px
+	.history__menu
+		top: 43px
+		left: 141px
+		font-size: $main_size + 4
+		padding: 15px 0
+	.header_wrap
+		width: 1400px
+	.news__title-pos,
+	.related__title-pos,
+	.models__title-pos,
+	.contact__title-pos
+		font-size: $main_size + 38
+	.news__car
+		width: 1380px
+	.wrap__img,
+	.news__img,
+	.news__content
+		width: 690px
+		height: 436px
+	.content__text
+		width: 550px
+		font-size: $main_size + 4
+		line-height: 24px
+	.content__theme
+		font-size: $main_size + 12
+	.content__date
+		font-size: $main_size + 2
+	.footer__link
+		font-size: $main_size + 10
+
+@media screen and (max-width: 999px)
+	.header
+		padding: 15px
+	.header_wrap
+		width: 715px
+	.news__car
+		width: 700px
+	.wrap__img,
+	.news__img,
+	.news__content
+		width: 350px
+		height: 235px
+	.news__content
+		padding: 15px
+	.content__text
+		font-size: $main_size - 3
+		width: 100%
+
+
+@media screen and (max-width: 767px)
+	.header__logo
+		width: 200px
+	.header_wrap
+		width: 420px
+		flex-wrap: wrap
+	.header__nav
+		display: none
+	.dropdown_menu
+		display: inline-block
+	.news__title-pos
+		font-size: $main_size + 22
+	.news__car
+		width: 420px
+	.news__content
+		height: auto
+		padding: 30px
+		&:before
+			display: none
+			border-right: 0px
+	.wrap__img,
+	.news__img,
+	.news__content
+		width: 100%
+	.news__wrap
+		&:nth-child(2n)
+			flex-wrap: wrap-reverse
+	.news__car
+		padding: 50px 0 
+
+@media screen and (max-width: 479px)
+	.header
+		padding: 15px 5px
+	.header__logo
+		width: 200px
+	.header_wrap,
+	.dropdown_menu
+		width: 285px
+	.news__title-pos
+		font-size: $main_size + 18
+		&:before
+			width: 35px
+			left: -40px
+		&:after
+			width: 35px
+			right: -40px
+	.news__car
+		width: 285px
+	.wrap__img,
+	.news__img
+		height: 190px
+	.footer__nav
+		width: 300px
+		margin: 0 auto
+	.footer__link
+		margin-left: 14px
+		letter-spacing: 0.01em
+		font-size: $main_size 
+

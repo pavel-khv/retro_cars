@@ -1,0 +1,464 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700|Sacramento|Yanone+Kaffeesatz:400,500,700')
+
+$color_text : #46433f
+$color_caption : rgb(70, 67, 63)
+$hover_color : #0c9a8c
+$main_bg_color : #f3f3d3
+$sacramento : 'Sacramento', cursive
+$yanone : 'Yanone Kaffeesatz', sans-serif
+$open_sans : 'Open Sans', sans-serif
+$main_size : 16px 
+
+=title-style
+	font-family: $sacramento
+	font-size: $main_size + 26
+	color: $color_text
+	font-weight: 400
+	position: relative
+	&:before
+		content: ''
+		display: block
+		width: 67px
+		height: 1px
+		background: $color_text
+		position: absolute
+		left: -80px
+		top: 25px
+	&:after
+		content: ''
+		display: block
+		width: 67px
+		height: 1px
+		background: $color_text
+		position: absolute
+		right: -80px
+		top: 25px
+=accordion-hover
+	background: $hover_color
+	color: #fff
+	width: 430px
+	&:after
+		display: inline-block
+
+=nav-link
+	margin-left: 46px
+	font-size: $main_size + 2
+	font-family: $yanone
+	color: $color_text
+	transition: 0.2s
+	font-weight: 500
+	&:hover
+		color: $hover_color
+
+=caption-style
+	display: flex
+	flex-wrap: wrap
+	width: 940px
+	margin: 0 auto
+	padding: 30px 0 100px
+
+=placeholder
+	&::-webkit-input-placeholder
+		@content
+	&:-moz-placeholder
+		@content
+	&::-moz-placeholder
+		@content
+	&::-ms-input-placeholder
+		@content
+	&:-ms-input-placeholder
+		@content
+=hover-menu
+	position: absolute
+	top: 20px
+	left: 20px
+	padding: 20px 30px 10px
+	z-index: 2
+	background: #fff
+	font-size: $main_size - 3
+	line-height: 28px
+
+
+a 
+    text-decoration: none
+ul
+	list-style: none
+html,body
+	height: 100%
+body 
+    width: 100%
+    font-family: $open_sans
+    background: $main_bg_color
+.header__logo
+	font-family: $sacramento
+	font-size: $main_size + 14
+	color: $color_text
+.header
+	display: flex
+	max-width: 100%
+	justify-content: space-between
+	align-items: center
+	padding: 15px 30px
+	background: #fff
+.header_wrap
+	display: flex
+	justify-content: space-between
+	align-items: center
+	width: 980px
+	margin: 0 auto
+.header__nav
+	display: flex
+	li:hover > ul
+		display: block
+.header__link
+	+nav-link
+.header__link-active
+	color: $hover_color
+.about_us
+	position: relative
+	//треугольник для выпадающего списка
+	&:after
+		content: ''
+		position: absolute
+		left: 55%
+		z-index: 3
+		margin-left: -6px
+		bottom: -10px
+		border: 4px solid transparent
+		border-top: 4px solid $color_text
+.about_us-menu
+	+hover-menu
+	padding: 20px 0 10px
+	width: 110px
+	text-align: center
+	display: none
+.slide__menu
+	position: relative
+
+.about_us-links
+	color: $color_text
+	transition: 0.2s
+	width: 100%
+	&:hover 
+		color: #d0d0b5
+.history:after
+	content: '›'
+	position: absolute
+	right: 10px
+	padding-left: 20px
+	font-size: $main_size + 2
+.history__menu
+	+hover-menu
+	text-align: center
+	left: 110px
+	top: 38px
+	padding: 10px 0
+	display: none
+.history__list
+	transition: 0.4s
+	&:hover
+		background: #d0d0b5
+.history__menu-links
+	display: inline-block
+	padding: 0 25px
+	color: $color_text
+	transition: 0.2s
+	&:hover
+		color: #fff
+
+.slider
+	position: relative
+	width: 100%
+	height: auto
+	min-height: 130px
+.slider__image
+	min-height: 130px
+.slick-dots li 
+	display: none
+.slider__image-active
+	opacity: 1
+.dots
+	text-align: center
+	margin-top: 10px
+	margin-bottom: 25px
+.dot
+	display: inline-block
+	width: 10px
+	height: 10px
+	margin: 2px
+	border-radius: 50%;
+	background-color: $color_text
+	cursor: pointer
+.dot-active
+	background-color: $hover_color
+.news__title
+	text-align: center
+.news__title-pos
+	+title-style
+
+.news
+	padding-top: 50px
+.news__car
+	+caption-style
+.news__img
+	cursor: pointer
+	transition: 0.6s
+	&:hover
+		transform: scale(1.1)
+.news__wrap
+	display: flex
+	flex-wrap: wrap
+	width: 100%
+.wrap__img
+	width: 470px
+	height: 296px
+	overflow: hidden
+.news__content
+	position: relative
+	width: 470px
+	text-align: center
+	background: #fff
+	padding: 30px
+	box-sizing: border-box
+	&:before
+		content: ''
+		position: absolute
+		z-index: 2
+		left: -25px
+		top: 50%
+		margin-top: -7px
+		border: 14px solid transparent
+		border-right: 14px solid #fff
+	&:nth-child(2n + 1)
+		&:before
+			left: auto
+			right: -25px
+			border: 14px solid transparent
+			border-left: 14px solid #fff
+.content__theme
+	display: inline-block
+	color: $color_text
+	font-family: $yanone
+	line-height: 24px
+	font-size: $main_size + 6
+	margin-bottom: 14px
+	transition: all 0.4s
+	&:hover
+		color: $hover_color
+.content__date
+	display: inline-block
+	padding-bottom: 14px
+	margin-bottom: 14px
+	border-bottom: 1px solid #b5b5b5
+	font-size: $main_size - 2
+	color: $color_text
+.content__text
+	width: 280px
+	margin: 0 auto
+	font-size: $main_size - 2
+	color: #666
+
+.related
+.related-wrapper
+	+caption-style
+	justify-content: space-between
+.relted__accordion
+	display: block
+	width: 460px
+	
+.related__title-pos
+	+title-style
+.related__title
+	text-align: center
+.accordion__paragraph
+	width: 440px
+	background: #d0d0b5
+	color: $color_text
+	font-family: $yanone
+	font-size: $main_size + 4
+	line-height: 22px
+	padding: 15px 10px
+	margin: 0 0 7px -20px
+	transition: all 0.4s
+	position: relative
+	cursor: pointer
+	&:after
+		content: ''
+		position: absolute
+		right: -20px
+		top: 50%
+		margin-top: -10px
+		border: 10px solid transparent
+		border-left: 10px solid $hover_color
+		display: none
+	&:hover
+		+accordion-hover
+.accordion__paragraph-active
+	+accordion-hover
+
+.relted__article
+	width: 435px
+	padding: 0 10px
+	color: #666
+	font-size: $main_size - 3
+	line-height: 18px
+	border-left: 1px solid #b5b5b5
+.relted__text
+	display: none
+.relted__text-active
+	display: block
+
+
+.models__title-pos
+	+title-style
+.models__title
+	text-align: center
+.models-wrapper
+	display: flex
+	justify-content: space-between
+	width: 920px
+	margin: 0 auto
+	background: #d0d0b5
+	padding: 20px 10px
+	margin: 30px auto 100px
+	ul
+		width: 100px
+	li 
+		background: url('../img/page_1-news/mark.gif') 0px no-repeat 
+		padding-left: 8px
+.models__car
+	color: $color_text
+	font-size: $main_size - 3
+	transition: 0.2s
+	line-height: 20px
+	&:hover
+		color: $hover_color
+
+.contact
+	width: 100%
+	background: url('../img/background-contacts/bg-1.png') no-repeat
+	background-size: cover
+	padding: 100px 0 40px
+.contact__title-pos
+	+title-style
+	color: #fff
+	&:before
+		background: #fff
+	&:after
+		background: #fff
+.contact__title
+	text-align: center
+.contact__form
+	text-align: center
+	width: 490px
+	margin: 15px auto
+.input
+	background: transparent
+	font-family: $open_sans
+	border: 1px solid #fff
+	width: 90%
+	height: 20px
+	padding: 10px
+	margin-bottom: 8px
+	color: #fff
+	outline: none
+	+placeholder
+		color: #fff !important
+		opacity: 0.9 
+		font-family: $open_sans
+		font-size: $main_size - 3
+	&:focus
+		+placeholder
+			opacity: 0.4
+.text__area
+	resize: none
+	height: 60px
+	overflow: auto
+.submit
+	width: 96%
+	padding: 10px
+	line-height: 22px
+	font-size: $main_size + 6
+	border: none
+	color: #fff
+	background: $hover_color
+	font-family: $yanone
+	transition: 0.4s
+	&:hover
+		cursor: pointer
+		background: rgb(47, 47, 41)
+
+.footer
+	background: rgb(47, 47, 41)
+.footer__nav
+	text-align: center
+	padding: 43px 0
+.footer__link
+	+nav-link
+	color: #fff
+	margin-left: 24px
+	letter-spacing: 0.01em
+	font-size: $main_size + 3
+	&:first-child
+		margin-left: 0	
+.footer__link-active
+	color: $hover_color
+
+
+.image-source-link
+	color: #98C3D1
+.mfp-with-zoom .mfp-container,
+.mfp-with-zoom.mfp-bg 
+	opacity: 0
+	-webkit-backface-visibility: hidden
+	/* ideally, transition speed should match zoom duration */
+	-webkit-transition: all 0.3s ease-out 
+	-moz-transition: all 0.3s ease-out 
+	-o-transition: all 0.3s ease-out
+	transition: all 0.3s ease-out
+
+
+.mfp-with-zoom.mfp-ready .mfp-container 
+		opacity: 1
+
+.mfp-with-zoom.mfp-ready.mfp-bg 
+		opacity: 0.8
+
+.mfp-with-zoom.mfp-removing .mfp-container, 
+.mfp-with-zoom.mfp-removing.mfp-bg 
+	opacity: 0
+
+
+.header 
+    position: relative
+    box-shadow: 0px 1px 5px -1px rgba(0,0,0,0.75)
+
+.header.clone 
+    position: fixed
+    top: -180px
+    transition: 0.2s top ease-in
+
+
+body.down .header.clone 
+    top: 0
+    left: 0
+    right: 0
+    z-index: 999
+
+
+.slick-prev,
+.slick-next
+	display: none !important
+
+.dropdown_menu
+	width: 420px
+	padding: 10px
+	margin-top: 10px
+	outline: 0
+	border: none
+	color: #fff 
+	background: #2d2d2d
+	font-family: $open_sans
+	font-weight: 600
+	appearance: none
+	display: none
